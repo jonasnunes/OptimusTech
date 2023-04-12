@@ -9,5 +9,6 @@
 
 * HTML
 * CSS
+* JS
 
 <p>Você pode conferir o projeto <a href="https://jonasnunes.github.io/optimustech/" target="_blank">clicando aqui</a>
