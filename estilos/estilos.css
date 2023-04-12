@@ -1,3 +1,109 @@
+/* MENU RESPONSIVO */
+
+#menuResponsivo.scroll {
+    background-color: #F9FAFB;
+}
+
+#menuResponsivo.scroll #nav #btn-mobile {
+    color: #fff;
+}
+
+#menuResponsivo.scroll #nav #menu {
+    background-color: #F9FAFB;
+}
+
+#menuResponsivo.scroll #nav #menu a {
+    color: #000;
+    border-bottom: 1px solid #fff;
+}
+  
+#menuResponsivo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 1rem 2rem;
+    background-color: rgba(196, 25, 25, 0.03);
+}
+
+#menuResponsivo #menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    right: 0px;
+    background: #F9FAFB;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0px;
+    visibility: hidden;
+    overflow-y: hidden;
+}
+
+#menuResponsivo #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+}
+
+#menuResponsivo #menu a {
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    color: #1e3932;
+    font-size: 1.8rem;
+}
+
+#menuResponsivo #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+#menuResponsivo #hamburger {
+    border-top: 2px solid #8E2424;
+    width: 20px;
+}
+
+#menuResponsivo #hamburger::after, #menuResponsivo #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #8E2424;;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+}
+
+#menuResponsivo #nav.active #hamburger {
+    border-top-color: transparent;
+}
+
+#menuResponsivo #nav.active #hamburger::before {
+    transform: rotate(135deg);
+}
+
+#menuResponsivo #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+@media (min-width: 481px) {
+    #menuResponsivo {
+      display: none;
+    }
+}
+
 /* HEADER */
 
 header{
@@ -93,6 +199,12 @@ section.sobre p:last-child,
 main div.chamado p:last-child{
     color: #667085;
     line-height: 1.875rem;
+}
+
+@media(max-width: 480px){
+    header{
+        display: none;
+    }
 }
 
 /* SECTION MÉTRICAS */
@@ -274,7 +386,6 @@ footer.oportunidades p.rodape{
 
     section.sobre,
     main div.chamado{
-        margin-top: 1rem;
         width: 80%;
     }
 
