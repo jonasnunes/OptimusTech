@@ -272,28 +272,6 @@ footer.oportunidades p.rodape{
 
 @media(max-width: 480px){
 
-    header nav div.nav-container{
-        justify-content: center;
-        margin: auto;
-    }
-
-    header nav div.nav-container div.logo,
-    header nav div.botoes{
-        display: none;
-    }
-
-    header nav div.nav-container div.links ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    header nav div.links ul li{
-        margin-right: 0;
-    }
-
     section.sobre,
     main div.chamado{
         margin-top: 1rem;
